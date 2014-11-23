@@ -22,9 +22,9 @@ if(!$fgmembersite->CheckLogin())
     
 }
 else{
-	echo '<li><a id="head" href="./view-sched-cal.php">My Schedule Calendar</a></li>';
-			
-	echo "<li id='userInfo'> Hello, " . $fgmembersite->UserFullName() .  "<a id='userInfo' href='./logout.php'> Logout </a> </li>";
+	echo '<li><a id="head" href="./view-avail-cal.php">My Events</a></li>';
+	echo "<li id='userInfo'> Hello, " . $fgmembersite->UserFullName() .  "</li>";	
+	echo "<li id='userInfo'> <a id='userInfo' href='./logout.php'> Logout </a> </li>";
 }
 
 ?>

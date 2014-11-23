@@ -20,8 +20,8 @@ if(!$fgmembersite->CheckLogin())
 <body>
 
 <script>
-var timesOpen = ['9:30','8:00','11:00'];
-var timesClosed = ['19:00','18:30','20:00'];
+var timesOpen = ['9:30am','8:00am','11:00am'];
+var timesClosed = ['7:00pm','6:30pm','10:00pm'];
 
 function getUrlVars() {
     var vars = {};
@@ -33,7 +33,7 @@ function getUrlVars() {
 
 
 function reserve(num){
-	window.location.href = 'availability.php?' + getUrlVars()["month"] + '&' + getUrlVars()["day"] + '&' + getUrlVars()["year"] + '&' + num;
+	window.location.href = 'confirmation.php?month=' + getUrlVars()["month"] + '&day=' + getUrlVars()["day"] + '&year=' + getUrlVars()["year"] + '&num=' + num;
 	}
 
 
@@ -49,7 +49,7 @@ function genTable() {
         for(var j = 0; j < 4; j++){
             if(j==0) {
                 var td = tr.insertCell();
-                var cell = document.createTextNode('Desk ' + (i+1));
+                var cell = document.createTextNode('Desk ' + (i+2));
                 //cell.style.padding('5px 5px 5px 5px');
                 td.appendChild(cell);
                 td.style.border = "1px solid black";

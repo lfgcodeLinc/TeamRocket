@@ -21,13 +21,12 @@ if(!$fgmembersite->CheckLogin())
 
 <div id='fg_membersite_content'>
 <h2>This is an Access Controlled Page</h2>
-This page can be accessed after logging in only. To make more access controlled pages, 
-copy paste the code between &lt;?php and ?&gt; to the page and name the page to be php.
+This page can be accessed after logging in only.
 <p>
 Logged in as: <?= $fgmembersite->UserFullName() ?>
 </p>
 <p>
-<a href='login-home.php'>Home</a>
+<a href='./login-home.php'>Home</a>
 </p>
 </div>
 </center>

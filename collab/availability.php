@@ -22,7 +22,6 @@ if(!$fgmembersite->CheckLogin())
 			width:100%;
 		}
 		table, th, td {
-			border: 1px solid black;
 			border-collapse: collapse;
 		}
 		th, td {
@@ -47,8 +46,8 @@ if(!$fgmembersite->CheckLogin())
   <center>
   <?php include 'siteincludes/bodystart.php';?><center>
 <div id='fg_membersite_content'>
-<h1>Events at Co//ob</h1>
-<h2>November 23, 2014</h2> <!--<?PHP echo $fgmembersite->UserFullName(); ?>!-->
+<h1>Events at Co//ob for <?= $fgmembersite->UserFullName(); ?></h1>
+<h2>November <?PHP echo $_GET["day"] . ", " . $_GET["year"];?></h2> <!--<?PHP echo $fgmembersite->UserFullName(); ?>!-->
 <br>
 
 <!DOCTYPE html>
@@ -78,7 +77,7 @@ if(!$fgmembersite->CheckLogin())
     <td>15</td>
   </tr>
   <tr>
-    <td>Shart Tank Greensboro</td>
+    <td>Shark Tank Greensboro</td>
     <td>Large Classroom</td>
 	<td>8:30</td>
 	<td>9:30</td>
@@ -112,6 +111,21 @@ if(!$fgmembersite->CheckLogin())
 	<td>4:30</td>
     <td>1</td>
   </tr>
+
+<?php 
+
+if(isset($_GET["num"]))
+echo "<tr>
+    <td>Your event</td>
+    <td>Desk ". ($_GET["num"] + 2) . "</td>
+	<td>12:30</td>
+	<td>4:30</td>
+    <td>1</td>
+  </tr>";?>
+
+
+
+
 </table>
 
 </body>
