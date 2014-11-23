@@ -1,23 +1,5 @@
 <?PHP
-/*
-    Registration/Login script from HTML Form Guide
-    V1.0
 
-    This program is free software published under the
-    terms of the GNU Lesser General Public License.
-    http://www.gnu.org/copyleft/lesser.html
-    
-
-This program is distributed in the hope that it will
-be useful - WITHOUT ANY WARRANTY; without even the
-implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.
-
-For updates, please visit:
-http://www.html-form-guide.com/php-form/php-registration-form.html
-http://www.html-form-guide.com/php-form/php-login-form.html
-
-*/
 require_once("class.phpmailer.php");
 require_once("formvalidator.php");
 
@@ -38,7 +20,7 @@ class FGMembersite
     //-----Initialization -------
     function FGMembersite()
     {
-        $this->sitename = 'YourWebsiteName.com';
+        $this->sitename = 'collab.com';
         $this->rand_key = '0iQx5oBk66oVZep';
     }
     
@@ -372,7 +354,7 @@ class FGMembersite
         
         
         $_SESSION['name_of_user']  = $row['name'];
-        $_SESSION['email_of_user'] = $row['email'];
+        $_SESSION['email_of_user'] = $row['username'];
         
         return true;
     }
@@ -615,6 +597,17 @@ class FGMembersite
         $formvars['username'] = $this->Sanitize($_POST['username']);
         $formvars['password'] = $this->Sanitize($_POST['password']);
 		$formvars['phnumber'] = $this->Sanitize($_POST['phnumber']);
+		$formvars['street'] = $this->Sanitize($_POST['street']);
+		$formvars['city'] = $this->Sanitize($_POST['city']);
+		$formvars['memState'] = $this->Sanitize($_POST['memState']);
+		$formvars['zip'] = $this->Sanitize($_POST['zip']);
+		$formvars['memType'] = $this->Sanitize($_POST['memType']);
+		$formvars['sec1'] = $this->Sanitize($_POST['sec1']);
+		$formvars['ans1'] = $this->Sanitize($_POST['ans1']);
+		$formvars['sec2'] = $this->Sanitize($_POST['sec2']);
+		$formvars['ans2'] = $this->Sanitize($_POST['ans2']);
+		$formvars['sec3'] = $this->Sanitize($_POST['sec3']);
+		$formvars['ans3'] = $this->Sanitize($_POST['ans3']);
     }
     
     function SendUserConfirmationEmail(&$formvars)
@@ -792,6 +785,17 @@ class FGMembersite
                 username,
                 password,
 				phone_number,
+				street,
+				city,
+				memState,
+				zip,
+				memType,
+				sec1,
+				ans1,
+				sec2,
+				ans2,
+				sec3,
+				ans3,
                 confirmcode
                 )
                 values
@@ -800,6 +804,17 @@ class FGMembersite
                 "' . $this->SanitizeForSQL($formvars['username']) . '",
                 "' . md5($formvars['password']) . '",
 				"' . $this->SanitizeForSQL($formvars['phnumber']) . '",
+				"' . $this->SanitizeForSQL($formvars['street']) . '",
+				"' . $this->SanitizeForSQL($formvars['city']) . '",
+				"' . $this->SanitizeForSQL($formvars['memState']) . '",
+				"' . $this->SanitizeForSQL($formvars['zip']) . '",
+				"' . $this->SanitizeForSQL($formvars['memType']) . '",
+				"' . $this->SanitizeForSQL($formvars['sec1']) . '",
+				"' . $this->SanitizeForSQL($formvars['ans1']) . '",
+				"' . $this->SanitizeForSQL($formvars['sec2']) . '",
+				"' . $this->SanitizeForSQL($formvars['ans2']) . '",
+				"' . $this->SanitizeForSQL($formvars['sec3']) . '",
+				"' . $this->SanitizeForSQL($formvars['ans3']) . '",
                 "' . $confirmcode . '"
                 )';      
         if(!mysql_query( $insert_query ,$this->connection))
@@ -828,11 +843,7 @@ class FGMembersite
         return $ret_str;
     }
     
- /*
-    Sanitize() function removes any potential threat from the
-    data submitted. Prevents email injections or any other hacker attempts.
-    if $remove_nl is true, newline chracters are removed from the input.
-    */
+
     function Sanitize($str,$remove_nl=true)
     {
         $str = $this->StripSlashes($str);

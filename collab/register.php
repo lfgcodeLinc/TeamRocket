@@ -58,6 +58,61 @@ if(isset($_POST['submitted']))
     <span id='register_name_errorloc' class='error'></span>
 </div>
 <div class='container'>
+    <label for='street' >Street*: </label><br/>
+    <input type='text' name='street' id='street' value='<?php echo $fgmembersite->SafeDisplay('street') ?>' maxlength="50" /><br/>
+    <span id='register_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='city' >City*: </label><br/>
+    <input type='text' name='city' id='city' value='<?php echo $fgmembersite->SafeDisplay('city') ?>' maxlength="50" /><br/>
+    <span id='register_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='memState' >State*: </label><br/>
+    <input type='text' name='memState' id='memState' value='<?php echo $fgmembersite->SafeDisplay('memState') ?>' maxlength="50" /><br/>
+    <span id='register_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='zip' >Zip*: </label><br/>
+    <input type='text' name='zip' id='zip' value='<?php echo $fgmembersite->SafeDisplay('zip') ?>' maxlength="50" /><br/>
+    <span id='register_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='memType' >Type of Member (Student/Teacher/Admin)*: </label><br/>
+    <input type='text' name='memType' id='memType' value='<?php echo $fgmembersite->SafeDisplay('memType') ?>' maxlength="50" /><br/>
+    <span id='register_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='sec1' >Security Question 1*: </label><br/>
+    <input type='text' name='sec1' id='sec1' value='<?php echo $fgmembersite->SafeDisplay('sec1') ?>' maxlength="50" /><br/>
+    <span id='register_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='ans1' >Answer 1*: </label><br/>
+    <input type='text' name='ans1' id='ans1' value='<?php echo $fgmembersite->SafeDisplay('ans1') ?>' maxlength="50" /><br/>
+    <span id='register_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='sec2' >Security Question 2*: </label><br/>
+    <input type='text' name='sec2' id='sec2' value='<?php echo $fgmembersite->SafeDisplay('sec2') ?>' maxlength="50" /><br/>
+    <span id='register_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='ans2' >Answer 2*: </label><br/>
+    <input type='text' name='ans2' id='ans2' value='<?php echo $fgmembersite->SafeDisplay('ans2') ?>' maxlength="50" /><br/>
+    <span id='register_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='sec3' >Security Question 3*: </label><br/>
+    <input type='text' name='sec3' id='sec3' value='<?php echo $fgmembersite->SafeDisplay('sec3') ?>' maxlength="50" /><br/>
+    <span id='register_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='ans3' >Answer 3*: </label><br/>
+    <input type='text' name='ans3' id='ans3' value='<?php echo $fgmembersite->SafeDisplay('ans3') ?>' maxlength="50" /><br/>
+    <span id='register_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
     <input type='submit' name='Submit' value='Submit' />
 </div>
 
