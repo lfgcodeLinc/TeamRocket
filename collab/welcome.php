@@ -76,6 +76,20 @@ xmlns:svg="http://www.w3.org/2000/svg">
 </svg>
 
 
+<<<<<<< HEAD
+=======
+// create text
+var text = draw.text(0,120, './Media/collabRoom.svg');
+
+text.attr({
+  fontFamily: 'Source Sans Pro',
+  fontSize: 120,
+  textAnchor: 'left'
+});
+
+// clip image with text
+image.attr('clip-path', text);
+>>>>>>> origin/master
 
 <!--
 Form Code End (see html-form-guide.com for more info.)

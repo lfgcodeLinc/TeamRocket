@@ -22,7 +22,7 @@ nav {
 
 table#head{
 	background-color: #64B434;
-	background-image: url('http://localhost/dir/TeamRocket/collab/media/IMG_1071.JPG');
+	background-image: url('../media/IMG_1071.JPG');
 	background-position: center;
 	width: 100%;
 	border: 0px solid #55A525;

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-    
+
 	<body>
-	
+
 <?php include 'siteincludes/header.php';?>
   <center>
   <?php include 'siteincludes/bodystart.php';?><center>
@@ -20,14 +20,18 @@
 			// Check connection
 			if ($connection->connect_error) {
 				die("Connection failed: " . $connection->connect_error);
-			} 
+			}
 
 			// Select database (note: connection & database will be selected by default for rest of session)
 			$sql = "SELECT Username FROM events";
 			$result = $connection->query($sql);
+<<<<<<< HEAD
 			
 			
 			
+=======
+
+>>>>>>> origin/master
 			if ($result->num_rows > 0) {
 				// output data of each row
 				while($row = $result->fetch_assoc()) {
@@ -37,7 +41,7 @@
     echo "0 results";
 }
 $connection->close();
-			
+
 
 
 		?>
