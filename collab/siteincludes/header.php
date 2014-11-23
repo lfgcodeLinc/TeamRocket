@@ -26,7 +26,7 @@ if(!$fgmembersite->CheckLogin())
 }
 else{
 
-	echo "<li id='userInfo'> Hello, " . $fgmembersite->UserFullName() .  "<a id='userInfo' href='http://localhost/dir/TeamRocket/collab/logout.php'> logout </a></li>";
+	echo "<li id='userInfo'> Hello, " . $fgmembersite->UserFullName() .  "<a id='userInfo' href='http://localhost/dir/TeamRocket/collab/home.php'> logout </a></li>";
 }
 
 ?>
