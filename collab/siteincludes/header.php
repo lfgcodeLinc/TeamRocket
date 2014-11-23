@@ -13,13 +13,6 @@
 			<ul>
 				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/home.php">Home</a></li>
 				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/moreinformation.php">More Information</a></li>
-<<<<<<< HEAD
-				
-=======
-				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/view-avail-cal.php">Calendar</a></li>
-			
->>>>>>> origin/master
-
 <?PHP
 require_once("./include/membersite_config.php");
 
