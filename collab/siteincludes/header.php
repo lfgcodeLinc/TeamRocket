@@ -13,8 +13,7 @@
 			<ul>
 				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/home.php">Home</a></li>
 				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/moreinformation.php">More Information</a></li>
-				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/calendar.php">Calendar</a></li>
-			
+				
 
 <?PHP
 require_once("./include/membersite_config.php");
@@ -25,7 +24,8 @@ if(!$fgmembersite->CheckLogin())
     
 }
 else{
-
+	echo '<li><a id="head" href="http://localhost/dir/TeamRocket/collab/view-sched-cal.php">My Schedule Calendar</a></li>';
+			
 	echo "<li id='userInfo'> Hello, " . $fgmembersite->UserFullName() .  "<a id='userInfo' href='http://localhost/dir/TeamRocket/collab/logout.php'> Logout </a> </li>";
 }
 

@@ -20,12 +20,28 @@ if(!$fgmembersite->CheckLogin())
 <body>
 
 <script>
-var timesOpen = ["9:30","8:00","11:00"];
-var timesClosed = ["19:00","18:30","20:00"];
+var timesOpen = ['9:30','8:00','11:00'];
+var timesClosed = ['19:00','18:30','20:00'];
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+
+function reserve(num){
+	window.location.href = 'availability.php?' + getUrlVars()["month"] + '&' + getUrlVars()["day"] + '&' + getUrlVars()["year"] + '&' + num;
+	}
+
+
 function genTable() {
-     var body = document.getElementsByClassName("textbodylocation")[0];
+     var body = document.getElementsByClassName("classfortable")[0];
         tbl  = document.createElement('table');
-    tbl.style.width='100px';
+    //tbl.style.width='100px';
+
     tbl.style.border = "1px solid black";
 
     for(var i = 0; i < 3; i++){
@@ -33,7 +49,9 @@ function genTable() {
         for(var j = 0; j < 4; j++){
             if(j==0) {
                 var td = tr.insertCell();
-                td.appendChild(document.createTextNode('Desk ' + i))
+                var cell = document.createTextNode('Desk ' + (i+1));
+                //cell.style.padding('5px 5px 5px 5px');
+                td.appendChild(cell);
                 td.style.border = "1px solid black";
             }
             if(j==1) {
@@ -46,12 +64,28 @@ function genTable() {
                 td.appendChild(document.createTextNode('Open Until: ' + timesClosed[i]))
                 td.style.border = "1px solid black";
             }
-            if(j==3) {
+            if(i == 0 && j==3) {
                 var td = tr.insertCell();
-                var button = document.createElement('BUTTON');
-                button.innerHTML = "Reserve";
-                button.onclick = function(){ reserve(i); };
-                td.appendChild(button);
+                var button0 = document.createElement('BUTTON');
+                button0.innerHTML = "Reserve";
+                button0.onclick = function(){ reserve(0); };
+                td.appendChild(button0);
+                td.style.border = "1px solid black";
+            }
+            if(i == 1 && j==3) {
+                var td = tr.insertCell();
+                var button1 = document.createElement('BUTTON');
+                button1.innerHTML = "Reserve";
+                button1.onclick = function(){ reserve(1); };
+                td.appendChild(button1);
+                td.style.border = "1px solid black";
+            }
+            if(i == 2 && j==3) {
+                var td = tr.insertCell();
+                var button2 = document.createElement('BUTTON');
+                button2.innerHTML = "Reserve";
+                button2.onclick = function(){ reserve(2); };
+                td.appendChild(button2);
                 td.style.border = "1px solid black";
             }
 
@@ -65,10 +99,7 @@ function genTable() {
     body.appendChild(tbl);
 }
 
-function reserve(num){
-	alert("Your Schedule has been created.");
 
-}
 </script>
 
 
@@ -94,12 +125,13 @@ End time:
     echo "<option value='$x:30'>$x:30</option>";
 	}
 ?>
-</select>
+</select><button onclick="genTable()"> Find Available Rooms</button>
 
-<button onclick="genTable()">Find Available Rooms</button>
+<br><br>
 
 
-
+<div class="classfortable"> 
+</div>
 
 
 
