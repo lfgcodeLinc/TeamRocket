@@ -10,9 +10,9 @@
 		<tr><td>
 			<center><h1 id="title">co//ab</h1></center>
 			<ul>
-				<li><a id="head" href="home.html">Home</a></li>
-				<li><a id="head" href="moreinformation.html">More Information</a></li>
-				<li><a id="head" href="calendar.html">Calendar</a></li>
+				<li><a id="head" href="home.php">Home</a></li>
+				<li><a id="head" href="moreinformation.php">More Information</a></li>
+				<li><a id="head" href="calendar.php">Calendar</a></li>
 			</ul>
 		</td></tr>
 	</table>
