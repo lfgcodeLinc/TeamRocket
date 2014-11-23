@@ -2,7 +2,9 @@
 <html>
     
 	<body>
-	
+	<?php include 'siteincludes/header.php';?>
+  <center>
+  <?php include 'siteincludes/bodystart.php';?><center>
 		<form action="welcome.php" id="welcome" method="post">
 		<table border="0">
 		<tbody>
@@ -38,6 +40,9 @@
 
 		</tbody></table>
 		</form>
-				
+				</center>
+<?php include 'siteincludes/bodyend.php';?>
+</center>
+<?php include 'siteincludes/footer.php';?>
 	</body>
 </html>

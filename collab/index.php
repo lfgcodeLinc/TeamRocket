@@ -2,6 +2,11 @@
 <html>
     
 	<body>
+	
+<?php include 'siteincludes/header.php';?>
+  <center>
+  <?php include 'siteincludes/bodystart.php';?><center>
+
 		<?php
 
 		// Set connection variables
@@ -34,6 +39,9 @@ $connection->close();
 
 
 		?>
-		
+		</center>
+<?php include 'siteincludes/bodyend.php';?>
+</center>
+<?php include 'siteincludes/footer.php';?>
 	</body>
 </html>

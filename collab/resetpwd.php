@@ -17,6 +17,9 @@ if($fgmembersite->ResetPassword())
       <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
 </head>
 <body>
+<?php include 'siteincludes/header.php';?>
+  <center>
+  <?php include 'siteincludes/bodystart.php';?><center>
 <div id='fg_membersite_content'>
 <?php
 if($success){
@@ -32,6 +35,9 @@ Your new password is sent to your email address.
 }
 ?>
 </div>
-
+</center>
+<?php include 'siteincludes/bodyend.php';?>
+</center>
+<?php include 'siteincludes/footer.php';?>
 </body>
 </html>

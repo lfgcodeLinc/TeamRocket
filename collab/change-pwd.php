@@ -27,6 +27,9 @@ if(isset($_POST['submitted']))
       <script src="scripts/pwdwidget.js" type="text/javascript"></script>       
 </head>
 <body>
+<?php include 'siteincludes/header.php';?>
+  <center>
+  <?php include 'siteincludes/bodystart.php';?><center>
 
 <!-- Form Code Start -->
 <div id='fg_membersite'>
@@ -98,6 +101,11 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 <!--
 Form Code End (see html-form-guide.com for more info.)
 -->
+
+</center>
+<?php include 'siteincludes/bodyend.php';?>
+</center>
+<?php include 'siteincludes/footer.php';?>
 
 </body>
 </html>

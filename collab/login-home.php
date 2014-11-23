@@ -16,6 +16,9 @@ if(!$fgmembersite->CheckLogin())
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css">
 </head>
 <body>
+<?php include 'siteincludes/header.php';?>
+  <center>
+  <?php include 'siteincludes/bodystart.php';?><center>
 <div id='fg_membersite_content'>
 <h2>Home Page</h2>
 Welcome back <?= $fgmembersite->UserFullName(); ?>!
@@ -26,5 +29,12 @@ Welcome back <?= $fgmembersite->UserFullName(); ?>!
 <br><br><br>
 <p><a href='logout.php'>Logout</a></p>
 </div>
+</center>
+<?php include 'siteincludes/bodyend.php';?>
+</center>
+<!--
+Form Code End (see html-form-guide.com for more info.)
+-->
+<?php include 'siteincludes/footer.php';?>
 </body>
 </html>

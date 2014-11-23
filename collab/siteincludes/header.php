@@ -1,11 +1,11 @@
 	<!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/dir/TeamRocket/collab/siteincludes/main.css">
 
 </head>
 
-<?php include '../collab/login.php';?>
+
 	<table id="head">
 		<tr><td>
 			<center><h1 id="title">co//ab</h1></center>

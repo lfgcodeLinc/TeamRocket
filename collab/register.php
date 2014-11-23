@@ -21,7 +21,9 @@ if(isset($_POST['submitted']))
     <script src="scripts/pwdwidget.js" type="text/javascript"></script>      
 </head>
 <body>
-
+<?php include 'siteincludes/header.php';?>
+  <center>
+  <?php include 'siteincludes/bodystart.php';?><center>
 <!-- Form Code Start -->
 <div id='fg_membersite'>
 <form id='register' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
@@ -138,6 +140,12 @@ if(isset($_POST['submitted']))
     frmvalidator.addValidation("password","req","Please provide a password");
 
 </script>
-
+<?php include 'siteincludes/bodyend.php';?>
+</center>
+<!--
+Form Code End (see html-form-guide.com for more info.)
+-->
+<?php include 'siteincludes/footer.php';?>
 </body>
+
 </html>

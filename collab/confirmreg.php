@@ -20,6 +20,11 @@ if(isset($_GET['code']))
 </head>
 <body>
 
+<?php include 'siteincludes/header.php';?>
+  <center>
+  <?php include 'siteincludes/bodystart.php';?><center>
+
+
 <h2>Confirm registration</h2>
 <p>
 Please enter the confirmation code in the box below
@@ -53,6 +58,11 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 </script>
 </div>
 
+
+</center>
+<?php include 'siteincludes/bodyend.php';?>
+</center>
+<?php include 'siteincludes/footer.php';?>
 
 </body>
 </html>

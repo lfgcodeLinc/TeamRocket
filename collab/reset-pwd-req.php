@@ -21,6 +21,10 @@ if(isset($_POST['submitted']))
       <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
 </head>
 <body>
+<body>
+<?php include 'siteincludes/header.php';?>
+  <center>
+  <?php include 'siteincludes/bodystart.php';?><center>
 <!-- Form Code Start -->
 <div id='fg_membersite'>
 <form id='resetreq' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
@@ -64,6 +68,9 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 <!--
 Form Code End (see html-form-guide.com for more info.)
 -->
-
+</center>
+<?php include 'siteincludes/bodyend.php';?>
+</center>
+<?php include 'siteincludes/footer.php';?>
 </body>
 </html>
