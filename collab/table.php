@@ -1,14 +1,18 @@
 <!DOCTYPE HTML>
 <html>
   <body>
+
+    <?php include 'siteincludes/header.php';?><center>
+    <?php include 'siteincludes/bodystart.php';?><center>
+
     <?php
-      $servername = "localhost";
+      $host     = "localhost";
       $username = "admin";
       $password = "admin123";
-      $dbname = "database";
+      $database = "collab";
 
       // Create connection
-      $connection = new mysqli($servername, $username, $password, $dbname);
+      $connection = new mysqli($host, $username, $password, $database);
       // Check connection
       if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
