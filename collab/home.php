@@ -1,6 +1,19 @@
 <!DOCTYPE html>
+
+
 <html>
 <head>
+
+<?PHP
+require_once("./include/membersite_config.php");
+
+if($fgmembersite->CheckLogin())
+{
+    echo "<meta http-equiv='refresh' content='0; url=login-home.php' />";
+    
+}
+
+?>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 800px)" href="mobile.css" />
 	<title>Co//ab Entrepreneurial Workspace</title>
