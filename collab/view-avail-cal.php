@@ -28,7 +28,7 @@ self.close();
 function reload(form){
 var month_val=document.getElementById('month').value; // collect month value
 var year_val=document.getElementById('year').value;      // collect year value
-self.location='cal2.php?month=' + month_val + '&year=' + year_val ; // reload the page
+self.location='view-avail-cal.php?month=' + month_val + '&year=' + year_val ; // reload the page
 }
 </script>
 <style type="text/css">
@@ -127,7 +127,7 @@ echo $adj2;   // Blank the balance cell of calendar at the end
 
 echo "<tr><td colspan=7 align=center><a href='http://www.plus2net.com'><b>plus2net.com Calendar</b></a></td></tr>";
 echo "</tr></table>";
-echo "<center><a href=cal2.php>Reset PHP Calendar</a></center>";
+echo "<center><a href=view-avail-cal.php>Reset PHP Calendar</a></center>";
 
 ?>
 </center>
