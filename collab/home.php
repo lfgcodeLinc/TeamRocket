@@ -22,19 +22,22 @@
 			</ul>
 		</td></tr>
 	</table>-->
+	<?php include 'siteincludes/header.php';?>
+ 
 	<!--end head-->
-	<?php include 'header.php';?>
+	
+  
 	<!--body-->
-	<table id="body">
-		<tr><td>
-			<p id="body">Co//ab is a new co-working, entrepreneurial and higher education experiential learning space. Co//ab is a 4,773 square foot collaborative workspace set in an urban environment for entrepreneurs, students, and industry to work together. Co//ab is located at 229 North Greene Street in Downtown Greensboro and is the result of a partnership between the Greensboro Partnership Entrepreneur Connection and Action Greensboro.<br/><br/>
+	<?php include 'siteincludes/bodystart.php';?>
+	Co//ab is a new co-working, entrepreneurial and higher education experiential learning space. Co//ab is a 4,773 square foot collaborative workspace set in an urban environment for entrepreneurs, students, and industry to work together. Co//ab is located at 229 North Greene Street in Downtown Greensboro and is the result of a partnership between the Greensboro Partnership Entrepreneur Connection and Action Greensboro.<br/><br/>
 				Co//ab will be a natural destination for early stage entrepreneurs to lease work space and create community. Co//ab serves as a satellite learning higher education meet up space for students and industry to connect, demo projects, swap ideas, and share best practices.<br/><br/>
-				Amenities include classroom space, meeting rooms, desks, coffee, and gigabit speed internet. The space will serve as the first North State fiber Internet business in downtown Greensboro. More information about the facilities and staff available at co//ab is available HERE</p> 
-			</td></tr>
-		</table>
+				Amenities include classroom space, meeting rooms, desks, coffee, and gigabit speed internet. The space will serve as the first North State fiber Internet business in downtown Greensboro. More information about the facilities and staff available at co//ab is available HERE
+	<?php include 'siteincludes/bodyend.php';?>
+	
 		<!--end body-->
 
-
+	<?php include 'siteincludes/footer.php';?>
+	
 	</body>
 
 

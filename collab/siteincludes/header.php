@@ -10,9 +10,9 @@
 		<tr><td>
 			<center><h1 id="title">co//ab</h1></center>
 			<ul>
-				<li><a id="head" href="home.php">Home</a></li>
-				<li><a id="head" href="moreinformation.html">More Information</a></li>
-				<li><a id="head" href="calendar.html">Calendar</a></li>
+				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/home.php">Home</a></li>
+				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/moreinformation.php">More Information</a></li>
+				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/calendar.php">Calendar</a></li>
 			</ul>
 		</td></tr>
 	</table>
