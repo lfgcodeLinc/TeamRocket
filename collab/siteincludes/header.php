@@ -13,7 +13,7 @@
 			<ul>
 				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/home.php">Home</a></li>
 				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/moreinformation.php">More Information</a></li>
-				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/calendar.php">Calendar</a></li>
+				<li><a id="head" href="http://localhost/dir/TeamRocket/collab/view-avail-cal.php">Calendar</a></li>
 			
 
 <?PHP
