@@ -22,7 +22,7 @@ nav {
 
 table#head{
 	background-color: #64B434;
-	background-image: url('IMG_1071.JPG');
+	background-image: url('http://localhost/dir/TeamRocket/collab/media/IMG_1071.JPG');
 	background-position: center;
 	width: 100%;
 	border: 0px solid #55A525;
@@ -51,7 +51,31 @@ h1#title{
 li {
     display: inline;
 }
+
+li#userInfo{
+    
+    width: 10em;
+    color:#ffffff;
+	background-color:rgba(0,0,0,0.70);
+    padding: 0.2em 0.6em;
+    margin-right: 100px;
+
+	float: right;
+
+}
+
+a#userInfo{
+	 font-weight: bold;
+    color:#ffffff;
+    text-decoration: none;
+
+}
+a#userInfo:hover {
+    /*background-color: fuchsia;*/
+    text-decoration: underline;
+}
 ul {
+	display: inline;
     float: left;
     width: 100%;
     /*padding: 0;
@@ -59,6 +83,7 @@ ul {
     list-style-type: none;*/
 }
 a#head{
+	 font-weight: bold;
     float: left;
     width: 12em;
     text-decoration: none;
