@@ -52,6 +52,10 @@ table,td{ border: 1px solid #ffffff }
 </style>
 </head>
 <body>
+
+  <?php include 'siteincludes/header.php';?>
+  <center>
+  <?php include 'siteincludes/bodystart.php';?><center>
 <?Php
 @$month=$_GET['month'];
 @$year=$_GET['year'];
@@ -126,5 +130,12 @@ echo "</tr></table>";
 echo "<center><a href=cal2.php>Reset PHP Calendar</a></center>";
 
 ?>
+</center>
+<?php include 'siteincludes/bodyend.php';?>
+</center>
+<!--
+Form Code End (see html-form-guide.com for more info.)
+-->
+<?php include 'siteincludes/footer.php';?>
 </body>
 </html>
