@@ -14,6 +14,10 @@
 Your password is updated!
 
 <p>
+<a href='login-home.php'>Return to Login Home</a>
+</p>
+
+<p>
 <a href='logout.php'>logout</a>
 </p>
 

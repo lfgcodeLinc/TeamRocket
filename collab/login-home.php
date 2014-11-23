@@ -25,7 +25,7 @@ Welcome back <?= $fgmembersite->UserFullName(); ?>!
 
 <p><a href='schedule-event.php'>Schedule an Event</a></p>
 
-<p><a href='view-availability.php'>View Availability</a></p>
+<p><a href='view-avail-cal.php'>View Availability</a></p>
 
 <p><a href='update-profile.php'>Update Profile</a></p>
 

@@ -14,6 +14,7 @@ if(!$fgmembersite->CheckLogin())
       <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
       <title>Home page</title>
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css">
+	    <script type='text/javascript' src='scripts/d3.js'></script>
 </head>
 <body>
 <div id='fg_membersite_content'>
