@@ -69,14 +69,14 @@ class FGMembersite
         {
             return false;
         }
-        
+ /**       
         if(!$this->SendUserConfirmationEmail($formvars))
         {
             return false;
         }
 
         $this->SendAdminIntimationEmail($formvars);
-        
+    **/    
         return true;
     }
 
@@ -340,7 +340,7 @@ class FGMembersite
         }          
         $username = $this->SanitizeForSQL($username);
         $pwdmd5 = md5($password);
-        $qry = "Select name, email from $this->tablename where username='$username' and password='$pwdmd5' and confirmcode='y'";
+        $qry = "Select name, username from $this->tablename where username='$username' and password='$pwdmd5' and confirmcode='y'";
         
         $result = mysql_query($qry,$this->connection);
         
@@ -815,7 +815,7 @@ class FGMembersite
 				"' . $this->SanitizeForSQL($formvars['ans2']) . '",
 				"' . $this->SanitizeForSQL($formvars['sec3']) . '",
 				"' . $this->SanitizeForSQL($formvars['ans3']) . '",
-                "' . $confirmcode . '"
+                "' . 'y' . '"
                 )';      
         if(!mysql_query( $insert_query ,$this->connection))
         {
