@@ -28,7 +28,7 @@ var image = draw.image('http://www.svgjs.com/images/shade.jpg',
                        0, -150, 600, 600);
 
 // create text
-var text = draw.text(0,120, 'http://localhost/dir/TeamRocket/Media/collabRoom.svg');
+var text = draw.text(0,120, './Media/collabRoom.svg');
 
 text.attr({
   fontFamily: 'Source Sans Pro',

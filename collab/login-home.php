@@ -23,7 +23,7 @@ if(!$fgmembersite->CheckLogin())
 <h2>Home Page</h2>
 Welcome back <?= $fgmembersite->UserFullName(); ?>!
 
-<p><a href='schedule-event.php'>Schedule an Event</a></p>
+<p><a href='view-sched-cal.php'>Schedule an Event</a></p>
 
 <p><a href='view-avail-cal.php'>View Events</a></p>
 
