@@ -69,12 +69,19 @@ function draw_calendar($month,$year){
 }
 
 /* sample usages */
-echo '<h2>July 2009</h2>';
-echo draw_calendar(7,2009);
+echo '<h2>November 2014</h2>';
+echo draw_calendar(11,2014);
 
-echo '<h2>August 2009</h2>';
-echo draw_calendar(8,2009);
+echo '<h2>December 2014</h2>';
+echo draw_calendar(12, 2014);
 
 ?>
 </body>
+
+<script>
+  function dispTable(tabl)
+  {
+    
+  }
+</script>
 </html>
