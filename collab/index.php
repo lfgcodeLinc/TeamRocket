@@ -23,8 +23,10 @@
 			} 
 
 			// Select database (note: connection & database will be selected by default for rest of session)
-			$sql = "SELECT * FROM User";
+			$sql = "SELECT Username FROM events";
 			$result = $connection->query($sql);
+			
+			
 			
 			if ($result->num_rows > 0) {
 				// output data of each row
