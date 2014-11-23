@@ -1,81 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <link rel="stylesheet" type="text/css" href="main.css" >
-  </head>
-
 <body>
-  <?php
-    echo
-      '<TABLE BORDER=3 CELLSPACING=3 CELLPADDING=3>
-        <TR>
-          <TD COLSPAN="7" ALIGN=center><B>November 2014</B></TD>
-        </TR>
-        <TR>
-          <TD ALIGN=center>Sun</TD>
-          <TD ALIGN=center>Mon</TD>
-          <TD ALIGN=center>Tue</TD>
-          <TD ALIGN=center>Wed</TD>
-          <TD ALIGN=center>Thu</TD>
-          <TD ALIGN=center>Fri</TD>
-          <TD ALIGN=center>Sat</TD>
-        </TR>
-        <TR>
-          <TD ALIGN=center></TD>
-          <TD ALIGN=center></TD>
-          <TD ALIGN=center></TD>
-          <TD ALIGN=center></TD>
-          <TD ALIGN=center></TD>
-          <TD ALIGN=center></TD>
-          <TD ALIGN=center>1</TD>
-        </TR>
-        <TR>
-          <TD ALIGN=center>2</TD>
-          <TD ALIGN=center>3</TD>
-          <TD ALIGN=center>4</TD>
-          <TD ALIGN=center>5</TD>
-          <TD ALIGN=center>6</TD>
-          <TD ALIGN=center>7</TD>
-          <TD ALIGN=center>8</TD>
-        </TR>
-        <TR>
-          <TD ALIGN=center>9</TD>
-          <TD ALIGN=center>10</TD>
-          <TD ALIGN=center>11</TD>
-          <TD ALIGN=center>12</TD>
-          <TD ALIGN=center>13</TD>
-          <TD ALIGN=center>14</TD>
-          <TD ALIGN=center>15</TD>
-        </TR>
-        <TR>
-          <TD ALIGN=center>16</TD>
-          <TD ALIGN=center>17</TD>
-          <TD ALIGN=center>18</TD>
-          <TD ALIGN=center>19</TD>
-          <TD ALIGN=center>20</TD>
-          <TD ALIGN=center>21</TD>
-          <TD ALIGN=center>22</TD>
-        </TR>
-        <TR>
-          <TD ALIGN=center>23</TD>
-          <TD ALIGN=center>24</TD>
-          <TD ALIGN=center>25</TD>
-          <TD ALIGN=center>26</TD>
-          <TD ALIGN=center>27</TD>
-          <TD ALIGN=center>28</TD>
-          <TD ALIGN=center>29</TD>
-        </TR>
-        <TR>
-          <TD ALIGN=center>30</TD>
-          <TD ALIGN=center></TD>
-          <TD ALIGN=center></TD>
-          <TD ALIGN=center></TD>
-          <TD ALIGN=center></TD>
-          <TD ALIGN=center></TD>
-          <TD ALIGN=center></TD>
+<?php
+/* draws a calendar */
+function draw_calendar($month,$year){
 
-        </TR>
-      </TABLE>';
-    ?>
-  </body>
+  /* draw table */
+  $calendar = '<table cellpadding="0" cellspacing="0" class="calendar">';
+
+  /* table headings */
+  $headings = array('Sunday','Monday','Tuesday','Wednesday','Thursday'
+            ,'Friday','Saturday');
+  $calendar.= '<tr class="calendar-row"><td class="calendar-day-head">'.
+    implode('</td><td class="calendar-day-head">',$headings).'</td></tr>';
+
+  /* days and weeks vars now ... */
+  $running_day = date('w',mktime(0,0,0,$month,1,$year));
+  $days_in_month = date('t',mktime(0,0,0,$month,1,$year));
+  $days_in_this_week = 1;
+  $day_counter = 0;
+  $dates_array = array();
+
+  /* row for week one */
+  $calendar.= '<tr class="calendar-row">';
+
+  /* print "blank" days until the first of the current week */
+  for($x = 0; $x < $running_day; $x++):
+    $calendar.= '<td class="calendar-day-np"> </td>';
+    $days_in_this_week++;
+  endfor;
+
+  /* keep going with days.... */
+  for($list_day = 1; $list_day <= $days_in_month; $list_day++):
+    $calendar.= '<td class="calendar-day">';
+      /* add in the day number */
+      $calendar.= '<div class="day-number">'.$list_day.'</div>';
+
+      /** QUERY THE DATABASE FOR AN ENTRY FOR THIS DAY !!  IF MATCHES FOUND, PRINT THEM !! **/
+      $calendar.= str_repeat('<p> </p>',2);
+
+    $calendar.= '</td>';
+    if($running_day == 6):
+      $calendar.= '</tr>';
+      if(($day_counter+1) != $days_in_month):
+        $calendar.= '<tr class="calendar-row">';
+      endif;
+      $running_day = -1;
+      $days_in_this_week = 0;
+    endif;
+    $days_in_this_week++; $running_day++; $day_counter++;
+  endfor;
+
+  /* finish the rest of the days in the week */
+  if($days_in_this_week < 8):
+    for($x = 1; $x <= (8 - $days_in_this_week); $x++):
+      $calendar.= '<td class="calendar-day-np"> </td>';
+    endfor;
+  endif;
+
+  /* final row */
+  $calendar.= '</tr>';
+
+  /* end the table */
+  $calendar.= '</table>';
+
+  /* all done, return result */
+  return $calendar;
+}
+
+/* sample usages */
+echo '<h2>July 2009</h2>';
+echo draw_calendar(7,2009);
+
+echo '<h2>August 2009</h2>';
+echo draw_calendar(8,2009);
+
+?>
+</body>
 </html>
