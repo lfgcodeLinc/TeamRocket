@@ -1,3 +1,3 @@
 <table id="body">
 		<tr><td>
-			<p id="body">
+			<p id="body" class="textbodylocation">

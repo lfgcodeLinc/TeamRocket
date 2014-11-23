@@ -21,12 +21,12 @@ require_once("./include/membersite_config.php");
 
 if(!$fgmembersite->CheckLogin())
 {
-    echo "<li id='userInfo'><a id='userInfo' href='http://localhost/dir/TeamRocket/collab/login.php'> login </a></li>";
+    echo "<li id='userInfo'><a id='userInfo' href='http://localhost/dir/TeamRocket/collab/login.php'> Login </a> <br/> <a id='userInfo2' href='http://localhost/dir/TeamRocket/collab/register.php'> Register now</a></li>";
     
 }
 else{
 
-	echo "<li id='userInfo'> Hello, " . $fgmembersite->UserFullName() .  "<a id='userInfo' href='http://localhost/dir/TeamRocket/collab/logout.php'> logout </a></li>";
+	echo "<li id='userInfo'> Hello, " . $fgmembersite->UserFullName() .  "<a id='userInfo' href='http://localhost/dir/TeamRocket/collab/logout.php'> Logout </a> </li>";
 }
 
 ?>

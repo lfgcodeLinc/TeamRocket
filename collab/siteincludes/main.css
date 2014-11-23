@@ -74,6 +74,18 @@ a#userInfo:hover {
     /*background-color: fuchsia;*/
     text-decoration: underline;
 }
+
+a#userInfo2{
+
+    color:#0000FF;
+    text-decoration: none;
+
+}
+a#userInfo2:hover {
+    /*background-color: fuchsia;*/
+    text-decoration: underline;
+}
+
 ul {
 	display: inline;
     float: left;
