@@ -1,10 +1,5 @@
 body {
-	background-color: #EBE8E4;
-	color: #222;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-weight: 300;
-	font-size: 15px;
-	margin: 8px 100px 8px 100px;
+
 }
 
 /*
@@ -21,13 +16,7 @@ nav {
 }*/
 
 table#head{
-	background-color: #64B434;
-	background-image: url('IMG_1071.JPG');
-	background-position: center;
-	width: 100%;
-	border: 0px solid #55A525;
-	box-shadow: 0px 0px 10px #888888;
-	border-radius: 5px;
+
 }
 
 table#body{
@@ -40,11 +29,7 @@ table#body{
 
 
 h1#title{
-	color: #ffffff;
-	font-size: 450%;
-	width:25%;
-	border-radius: 5px;
-	background-color:rgba(0,0,0,0.70);
+
 }
 
 li {
