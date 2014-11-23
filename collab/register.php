@@ -80,10 +80,18 @@ if(isset($_POST['submitted']))
     <span id='register_name_errorloc' class='error'></span>
 </div>
 <div class='container'>
-    <label for='memType' >Type of Member (Student/Teacher/Admin)*: </label><br/>
-    <input type='text' name='memType' id='memType' value='<?php echo $fgmembersite->SafeDisplay('memType') ?>' maxlength="50" /><br/>
+    <label for='memType' >Type of Member*: </label><br/>
+	    <input type='text' name='memType' id='memType' value='<?php echo $fgmembersite->SafeDisplay('memType') ?>' maxlength="50" /><br/>
+<!--
+	<select>
+  <option id='memType' value='<?php echo $fgmembersite->SafeDisplay('memType') ?>' maxlength="50">Student</option>
+  <option id='memType' value='<?php echo $fgmembersite->SafeDisplay('memType') ?>' maxlength="50">Entrepreneur</option>
+  <option id='memType' value='<?php echo $fgmembersite->SafeDisplay('memType') ?>' maxlength="50">Admin</option>
+</select>
+-->
     <span id='register_name_errorloc' class='error'></span>
 </div>
+
 <div class='container'>
     <label for='sec1' >Security Question 1*: </label><br/>
     <input type='text' name='sec1' id='sec1' value='<?php echo $fgmembersite->SafeDisplay('sec1') ?>' maxlength="50" /><br/>
@@ -114,6 +122,7 @@ if(isset($_POST['submitted']))
     <input type='text' name='ans3' id='ans3' value='<?php echo $fgmembersite->SafeDisplay('ans3') ?>' maxlength="50" /><br/>
     <span id='register_name_errorloc' class='error'></span>
 </div>
+
 <div class='container'>
     <input type='submit' name='Submit' value='Submit' />
 </div>
