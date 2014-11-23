@@ -1,6 +1,8 @@
 <?PHP
 require_once("./include/membersite_config.php");
 
+//echo "month:" . $_GET["month"] . "day:" . $_GET["day"] . "Year:" . $_GET["year"];
+
 if(!$fgmembersite->CheckLogin())
 {
     $fgmembersite->RedirectToURL("login.php");
@@ -21,7 +23,7 @@ if(!$fgmembersite->CheckLogin())
   <?php include 'siteincludes/bodystart.php';?><center>
 <div id='fg_membersite_content'>
 <h2>Home Page</h2>
-Welcome back <?= $day ?>!
+Welcome back <?PHP echo $fgmembersite->UserFullName(); ?>!
 
 
 </div>

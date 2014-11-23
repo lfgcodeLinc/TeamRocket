@@ -115,7 +115,7 @@ echo "<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><t
 //////// Starting of the days//////////
 for($i=1;$i<=$no_of_days;$i++){
 $pv="'$month'".","."'$i'".","."'$year'";
-echo $adj."<td><a href='availability.php?day=$pv' onclick=\"post_value($pv);\">$i</a>"; // This will display the date inside the calendar cell
+echo $adj."<td><a href='availability.php?month=$month&day=$i&year=$year' onclick=\"post_value($pv);\">$i</a>"; // This will display the date inside the calendar cell
 echo " </td>";
 $adj='';
 $j ++;
