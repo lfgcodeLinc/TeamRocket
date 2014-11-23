@@ -1,7 +1,7 @@
 	<!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="http://localhost/collab/siteincludes/main.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/dir/TeamRocket/collab/siteincludes/main.css">
 
 </head>
 

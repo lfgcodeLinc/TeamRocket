@@ -170,7 +170,7 @@ class FGMembersite
             return false;
         }
         $user_rec = array();
-        if(false === $this->GetUserFromEmail($_POST['username'], $user_rec))
+        if(false === $this->GetUserFromEmail($_POST['Username'], $user_rec))
         {
             return false;
         }
@@ -250,7 +250,7 @@ class FGMembersite
         
         $pwd = trim($_POST['oldpwd']);
         
-        if($user_rec['password'] != md5($pwd))
+        if($user_rec['Password'] != md5($pwd))
         {
             $this->HandleError("The old password does not match!");
             return false;
@@ -403,7 +403,7 @@ class FGMembersite
     {
         $newpwd = $this->SanitizeForSQL($newpwd);
         
-        $qry = "Update $this->tablename Set password='".md5($newpwd)."' Where  id_user=".$user_rec['id_user']."";
+        $qry = "Update $this->tablename Set password='".md5($newpwd)."' Where  UserID=".$user_rec['UserID']."";
         
         if(!mysqli_query($this->connection,  $qry))
         {
